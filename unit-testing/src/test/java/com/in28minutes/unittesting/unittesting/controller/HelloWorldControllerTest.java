@@ -24,16 +24,16 @@ public class HelloWorldControllerTest {
 
     @Test
     public void helloWorld_basic() throws Exception {
-
+    	
+    	//call "/hello-wrold" APPLICATION_JSON
         RequestBuilder request= MockMvcRequestBuilders
                 .get("/hello-world")
                 .accept(MediaType.APPLICATION_JSON);
 
         MvcResult result= mockMvc.perform(request).andReturn();
 
-        // call "/hello-wrold"
+        
         //verify "Hello World"
-
         assertEquals("Hello World", result.getResponse().getContentAsString());
 
 
